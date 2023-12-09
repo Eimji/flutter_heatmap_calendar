@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../data/heatmap_color.dart';
+import '../util/animated_tap_container.dart';
 
 class HeatMapContainer extends StatelessWidget {
   final DateTime date;
@@ -32,7 +33,7 @@ class HeatMapContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: margin ?? const EdgeInsets.all(2),
-      child: GestureDetector(
+      child: AnimatedOnTapContainer(
         child: Container(
           decoration: BoxDecoration(
             color: backgroundColor ?? HeatMapColor.defaultColor,
